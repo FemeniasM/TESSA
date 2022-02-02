@@ -14,7 +14,9 @@ Clone the repository to the desired directory with the following command.
 ```sh
 git clone https://github.com/FemeniasM/TESSA
 ```
-Move to the `TESSA` directory and run the installation script. This script creates the indexes for the data sets and assumes that salmon is in your `$PATH`. User can change the path to the Salmon binary file with the `-s` argument as shown below. In addition, the user can define the number of threads (`-p` argument) and the k-mer size (`-k` argument) for the construction of the indexes.
+Click on this [link](https://mega.nz/folder/bk8U3CIB#wDBWeYMdrSO3zE3ZTF3C9Q) and download the `install` folder into the TESSA repository.
+
+Move to the `TESSA` directory and run the installation script (`install.sh`). This script creates the indexes for the data sets and assumes that salmon is in your `$PATH`. User can change the path to the Salmon binary file with the `-s` argument as shown below. In addition, the user can define the number of threads (`-p` argument) and the k-mer size (`-k` argument) for the construction of the indexes.
 
 ```sh
 cd TESSA/
