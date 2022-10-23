@@ -40,7 +40,7 @@ bedtools=/path/to/bedtools2/bin/bedtools
 
 #### Step 3 - make index for for the species of interest
 
-To create indices for species of interest, users can manually download the necessary references from the [web](https://genome.ucsc.edu/cgi-bin/hgGateway) site. Alternatively you can use the download function which will download the files for you. In both cases the references must be located in the `TESSA/ref` folder, as indicated below:
+To create indices for species of interest, users can manually download the necessary references from the web [site](https://genome.ucsc.edu/cgi-bin/hgGateway). Alternatively you can use the download function which will download the files for you. In both cases the references must be located in the `TESSA/ref` folder, as indicated below:
 ```
 TESSA/
     |_ref/
@@ -66,7 +66,6 @@ The indices are created only once for each species of interest.
 ### How to use
 ----
 
-`
 Once the indices are built, `quant` mode is the default command for running `tessa`. The arguments are detailed below:
 
 ```
