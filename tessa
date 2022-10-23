@@ -1,0 +1,56 @@
+#!/bin/bash
+CONFDIR=$(dirname `readlink -f $0`) 
+export CONFDIR=${CONFDIR}
+UTILDIR=${CONFDIR}/util
+export UTILDIR=${UTILDIR}
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+reset=`tput sgr0`
+
+# version #
+export TESSA_VERSION=0.0.1
+
+# usage #
+usage (){
+echo '
+            -. .-.   .-. .-.   .-.   
+            ||\|||\ /|||\|||\ /|||\
+╭━━━━┳━━━┳━━━┳━━━┳━━━╮|/ \|||\|||
+┃╭╮╭╮┃╭━━┫╭━╮┃╭━╮┃╭━╮┃~   `-~ `-`   
+╰╯┃┃╰┫╰━━┫╰━━┫╰━━┫┃╱┃┃
+╱╱┃┃╱┃╭━━┻━━╮┣━━╮┃╰━╯┃
+╱╱┃┃╱┃╰━━┫╰━╯┃╰━╯┃╭━╮┃
+╱╱╰╯╱╰━━━┻━━━┻━━━┻╯╱╰╯
+-. .-.   .-. .-.   .-. .-.   .  
+||\|||\ /|||\|||\ /|||\|||\ /|
+|/ \|||\|||/ \|||\|||/ \|||\||
+~   `-~ `-`   `-~ `-`   `-~ `-
+                   version 0.1'
+
+echo "Usage:
+ExplorATE ${yellow}[mode] ${green}[flags]${reset}
+modes:"
+echo -e "\ttessa ${yellow}download${reset} <download reference files>"
+echo -e "\ttessa ${yellow}index${reset} <make index for references>"
+echo -e "\ttessa ${yellow}quant${reset} <run salmon quantification>"
+echo -e "\ttessa ${yellow}summarize${reset} <summarize counts>"
+echo "run tessa ${yellow}[mode]${reset} -help for help"
+}
+
+# run #
+if [ $# -lt 1 ];then
+	usage
+	exit 1
+fi
+case ${1} in
+	download)
+		shift && bash ${UTILDIR}/download.sh "$@";;
+	index)
+		shift && bash ${UTILDIR}/index.sh "$@";;
+	quant)
+		shift && bash ${UTILDIR}/quant.sh "$@";;
+	summarize)
+		shift && bash ${UTILDIR}/summarize.sh "$@";;
+	*)
+		usage;;
+esac

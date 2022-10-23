@@ -1,0 +1,15 @@
+## Homo sapiens references
+genome_hg=https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
+rm_out_hg=https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.out.gz
+
+## Mus musculus references
+genome_mm=https://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.gz
+rm_out_mm=https://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.out.gz
+
+## Drosophila melanogaster references
+genome_dm=https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz
+rm_out_dm=https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.out.gz
+
+## Programs
+salmon=/path/to/salmon-X.X.X_linux_x86_64/bin/salmon
+bedtools=/path/to/bedtools2/bin/bedtools
