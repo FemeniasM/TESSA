@@ -2,7 +2,7 @@ TESSA - Transposons Exploration with Salmon's Selective Alignment
 ====
 ### Overview
 
-TESSA runs Salmon with Selective Alignment using pre-built indices based on GENCODE sequences and RepeatMasker references for human and mouse.
+TESSA runs Salmon's Selective Alignment with pre-built indices based on UCSC and RepeatMasker references.
 
 ### Requirements
 ----
